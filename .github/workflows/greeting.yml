@@ -1,0 +1,16 @@
+name: Greeting workflow
+
+on: [push, pull_request]
+
+jobs:
+  greetings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Greeting
+        run: echo "Hello from this workflow"
+      - name: Details
+        run: |
+          echo "Repository $GITHUB_REPOSITORY" 
+          echo "Branch $GITHUB_REF_NAME" 
+          echo "Runner OS $RUNNER_OS"
+          date
