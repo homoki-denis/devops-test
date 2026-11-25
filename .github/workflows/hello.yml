@@ -1,0 +1,16 @@
+name: Hello World
+
+on: push
+
+jobs:
+  say-hello:
+    runs-on: ubunt-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello, Github Actions"
+      - name: Show some details
+        run: |
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Branch: $GITHUB_REF_NAME"
+          echo "Runner OS: $RUNNER_OS"
+          date
